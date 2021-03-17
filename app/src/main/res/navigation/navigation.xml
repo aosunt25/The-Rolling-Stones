@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/rollingStonesFragment">
+    <fragment
+        android:id="@+id/rollingStonesFragment"
+        android:name="edu.itesm.primerexamen.RollingStonesFragment"
+        android:label="fragment_rolling_stones"
+        tools:layout="@layout/fragment_rolling_stones" >
+        <action
+            android:id="@+id/action_rollingStonesFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="edu.itesm.primerexamen.AlbumsFragment"
+        android:label="fragment_albums"
+        tools:layout="@layout/fragment_albums" >
+        <action
+            android:id="@+id/action_albumsFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="edu.itesm.primerexamen.AlbumFragment"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album" >
+        <argument
+            android:name="album"
+            app:argType="edu.itesm.primerexamen.Album" />
+    </fragment>
+</navigation>
