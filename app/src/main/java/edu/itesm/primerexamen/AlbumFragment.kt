@@ -34,7 +34,7 @@ class AlbumFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val text = "Estas viendo el album"
+        val text = "Mejor Cancion '" + args.album.mensajeSecreto + "'"
         val duration = Toast.LENGTH_SHORT
 
         val toast = Toast.makeText(getContext(), text, duration)
